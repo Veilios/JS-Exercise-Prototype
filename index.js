@@ -93,16 +93,21 @@ function Car(model, milesPerGallon) {
   this.milesPerGallon = milesPerGallon;
   this.tank = 0;
   this.odometer = 0;
-}
+};
 Car.prototype.fill = function(gallons) {
   this.tank = gallons;
 };
+Car.prototype.drive = function (distance){
+  this.odometer += distance;
+  this.tank = this.tank - (distance / this.milesPerGallon);
+};
 
-// let myCar = new Car("Equinox", 22);
+let myCar = new Car("Equinox", 22);
 // console.log(myCar.tank);
-// myCar.fill(22);
+ myCar.fill(25);
 // console.log(myCar.tank);
-
+myCar.drive(200);
+console.log(myCar);
 
 /*
   TASK 3
@@ -128,10 +133,10 @@ console.log(myKid.play())
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Inside a function, in global scope it becomes a window object
+  2. if followed by a dot it refers to the object it is in
+  3. when used in a constructor function, it refers to the object that is made and returned by the constructor
+  4. call and apply methods make this explicitly defined
 */
 
 
