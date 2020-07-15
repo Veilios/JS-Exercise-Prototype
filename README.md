@@ -7,6 +7,15 @@ In this module challenge you will continue working on your portfolio website to 
 ## Objectives
 
 - explain the four principles of the 'this' keyword and demonstrate each explanation with an example of their uses
+
+-Inside a function, in global scope it becomes a window object
+
+-if followed by a dot it refers to the object it is in
+
+-when used in a constructor function, it refers to the object that is made and returned by the constructor
+
+- call and apply methods make this explicitly defined
+
 - describe, and use prototypes, constructor functions the new keyword, and pseudo-classical inheritance to build a small object based video game
 
 ## Introduction
